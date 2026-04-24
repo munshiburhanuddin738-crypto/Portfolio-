@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Burhanuddin Munshi</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1><b>My Technical Projects</b></h1>
+        <p>A showcase of Python automation and financial tools</p>
+    </header>
+
+    <main>
+        <section id="projects-grid" style="display: grid; gap: 25px; margin-top: 30px;">
+
+    <div class="content-card" style="border-top: 4px solid #f59e0b;"> <div style="display: flex; justify-content: space-between; align-items: start;">
+            <h3><b>Global Currency Terminal</b></h3>
+            <span style="background: #f59e0b; color: #000; padding: 2px 8px; border-radius: 12px; font-size: 0.7rem; font-weight: bold;">FINTECH</span>
+        </div>
+        <p style="color: #38bdf8; font-family: monospace; font-size: 0.85rem; margin-top: 5px;">Language: Python (Requests, JSON, Caching)</p>
+        
+        <p style="font-size: 0.9rem; color: #cbd5e1; margin-top: 10px;">
+            A professional-grade terminal for tracking global exchange rates and precious metals (Gold/Silver). Features a local caching system to minimize API calls and improve speed on mobile environments.
+        </p>
+
+        <div style="background: #0f172a; padding: 10px; border-radius: 5px; margin-top: 15px;">
+            <p style="font-size: 0.8rem; color: #94a3b8;"><b>The Tech Challenge:</b> Handling API rate limits while maintaining real-time accuracy.</p>
+            <p style="font-size: 0.8rem; color: #4ade80;"><b>The Solution:</b> Built a custom JSON-based "Cool-down" logic that serves cached data if the last update was less than 5 minutes ago.</p>
+        </div>
+    </div>
+
+    <div class="content-card" style="border-top: 4px solid #a855f7;"> <div style="display: flex; justify-content: space-between; align-items: start;">
+            <h3><b>AI File Organizer</b></h3>
+            <span style="background: #a855f7; color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 0.7rem; font-weight: bold;">AUTOMATION</span>
+        </div>
+        <p style="color: #38bdf8; font-family: monospace; font-size: 0.85rem; margin-top: 5px;">Language: Python (OS, Shutil, Regex)</p>
+
+        <p style="font-size: 0.9rem; color: #cbd5e1; margin-top: 10px;">
+            A smart system that monitors folders and automatically categorizes files into directories based on extension, file content patterns, and date created.
+        </p>
+
+        <div style="background: #0f172a; padding: 10px; border-radius: 5px; margin-top: 15px;">
+            <p style="font-size: 0.8rem; color: #94a3b8;"><b>The Tech Challenge:</b> Preventing file conflicts when moving large batches of data.</p>
+            <p style="font-size: 0.8rem; color: #4ade80;"><b>The Solution:</b> Implemented a collision-check algorithm that renames duplicates with a timestamp suffix before moving them.</p>
+        </div>
+    </div>
+
+    <div class="content-card" style="border-top: 4px solid #ef4444;"> <div style="display: flex; justify-content: space-between; align-items: start;">
+            <h3><b>BBC News Aggregator</b></h3>
+            <span style="background: #ef4444; color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 0.7rem; font-weight: bold;">WEB DATA</span>
+        </div>
+        <p style="color: #38bdf8; font-family: monospace; font-size: 0.85rem; margin-top: 5px;">Language: Python (BeautifulSoup4, Requests)</p>
+
+        <p style="font-size: 0.9rem; color: #cbd5e1; margin-top: 10px;">
+            Automated scraper designed to bypass basic anti-bot headers and extract the top world headlines, formatting them into a clean, readable text file or dashboard.
+        </p>
+
+        <div style="background: #0f172a; padding: 10px; border-radius: 5px; margin-top: 15px;">
+            <p style="font-size: 0.8rem; color: #94a3b8;"><b>The Tech Challenge:</b> Bypassing "Forbidden 403" errors from BBC servers.</p>
+            <p style="font-size: 0.8rem; color: #4ade80;"><b>The Solution:</b> Integrated dynamic User-Agent rotation and added a randomized `time.sleep()` to mimic human browsing behavior.</p>
+        </div>
+    </div>
+
+</section>
+
+
+    </main>
+
+    <footer style="text-align: center; margin-top: 50px;">
+        <hr>
+        <p><b>Burhanuddin Munshi</b> | Python & AI Web Developer</p>
+        <p>Barwani, MP, India</p>
+    </footer>
+
+</body>
+</html>
