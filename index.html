@@ -3,131 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #38bdf8;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+        }
+        .menu.open {
+            display: flex;
+        }
+        .menu-toggle {
+            cursor: pointer;
+        }
+        @media (min-width: 768px) {
+            .menu {
+                display: flex;
+                flex-direction: row;
+            }
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-    <h1><b>Hi! I Am Burhanuddin Munshi A professional Python And Web Developer. <img src="/1771855008382 (2).png" height="200"><hr>
-    Want To Create Something ?
-</b></h1>
-
-    </header>
-    <main>
-        <hr>
-    <p>Transforming complexity into simplicity through code. My name is Burhanuddin Munshi, and I am a Python and Web Developer dedicated to building the next generation of digital tools. Whether it's developing dynamic web platforms using modern frameworks or engineering data-driven solutions with Python, I focus on performance, security, and impact. Let’s build something that matters</p>
-    <Hr>
-    <a href="/Education.html"><b>Education</b></a>
-    <hr>
-    <a href="/Projects.html"><b>Projects</b></a>
-    <hr>
-    <a href="/experience.html"<b>Experience</b>
-    <section id="github-stats" class="content-card" style="margin-top: 30px; text-align: center;">
-    <h2><b>📊 My Coding Activity</b></h2>
-    <hr>
-    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">
-        Real-time statistics pulled directly from my GitHub contributions.
-    </p>
-
-    <div style="margin-bottom: 15px;">
-        <img src="https://github-readme-stats.vercel.app/api?username=munshiburhanuddin738-crypto&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&amp;cache_seconds=86400"
-             alt="GitHub Stats" 
-             style="max-width: 100%; height: auto; border-radius: 8px;">
+    <div class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="menu" id="menu">
+            <a href="#home">Home</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
 
-    <div>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=munshiburhanuddin738-crypto&layout=compact&theme=tokyonight&hide_border=true&amp;cache_seconds=86400"
-             alt="Top Languages" 
-             style="max-width: 100%; height: auto; border-radius: 8px;">
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('open');
+        }
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('menu');
+                menu.classList.remove('open');
+            });
+        });
+    </script>
+
+    <!-- Existing Content Below the Navbar -->
+    <div id="content">
+        <!-- Add your content here -->
     </div>
-
-    <p style="margin-top: 15px; font-size: 0.8rem; color: #38bdf8;">
-        <i>*Stats update automatically as I push new code.</i>
-    </p>
-</section>
-
-    <section id="roadmap" class="content-card" style="margin-top: 30px; border-top: 2px solid #38bdf8; padding-top: 20px;">
-    <h2><b>🚀 Future Roadmap (2026-2027)</b></h2>
-    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">
-        As an experienced Python developer, my focus is shifting from local scripts to scalable, AI-driven solutions.
-    </p>
-
-    <div style="display: grid; gap: 15px;">
-        
-        <div style="background: #1e293b; padding: 15px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-            <p><b>🤖 AI-Powered Automation Hub</b></p>
-            <p style="font-size: 0.85rem; color: #cbd5e1;">Integrating LLM APIs to automatically summarize scraped news and data into actionable insights.</p>
-        </div>
-
-        <div style="background: #1e293b; padding: 15px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-            <p><b>🌐 Scalable SaaS Infrastructure</b></p>
-            <p style="font-size: 0.85rem; color: #cbd5e1;">Moving the "Medical Appointment Hub" to a live cloud environment using Supabase and real-time databases.</p>
-        </div>
-
-        <div style="background: #1e293b; padding: 15px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-            <p><b>📦 Open Source Contribution</b></p>
-            <p style="font-size: 0.85rem; color: #cbd5e1;">Publishing a custom Python library on PyPI designed for mobile-based web automation and scraping.</p>
-        </div>
-
-        <div style="background: #1e293b; padding: 15px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-            <p><b>🎨 Advanced UI/UX Mastering</b></p>
-            <p style="font-size: 0.85rem; color: #cbd5e1;">Rebuilding core project front-ends with Tailwind CSS for modern, high-performance user experiences.</p>
-        </div>
-
-        <div style="background: #1e293b; padding: 15px; border-radius: 8px; border-left: 4px solid #38bdf8;">
-            <p><b>📈 FinTech Data Streams</b></p>
-            <p style="font-size: 0.85rem; color: #cbd5e1;">Expanding the Currency Terminal with automated Telegram/WhatsApp alerts for real-time market fluctuations.</p>
-            <section style="text-align: center; margin: 50px 0;">
-    <h3 style="color: #cbd5e1;">Want to see my technical work?</h3>
-    <a href="projects.html" class="cta-button" style="display: inline-block; background: #38bdf8; color: #0f172a; padding: 15px 30px; border-radius: 8px; font-weight: bold; text-decoration: none; margin-top: 15px;">
-        Explore My Python Projects
-    </a>
-</section>
-
-        </div>
-
-    </div>
-</section>
-
-</section>
-
-    </main>
-    <hr>
-        <footer>
-        <h3><b>Contact Me</b></h3>
-        <hr>
-        <p><b>Contact No.</b> 9516129270</p>
-        <hr>
-        <p><b>Email ID :</b> munshiburhanuddin738@gmail.com</p>
-        <hr>
-        
-        <div class="content-card" style="margin-top: 20px;">
-            <h2 style="font-size: 1.2rem;">Send a Request</h2>
-            <p style="font-size: 0.9rem; color: #94a3b8;">Need a Python tool or want to collaborate? Drop a message below.</p>
-            
-            <form action="https://formspree.io/f/maqalgzn"method="POST"
-                <div style="margin-bottom: 15px;">
-                    <input type="email" name="email" required placeholder="Your Email Address" 
-                           style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #334155; background: #0f172a; color: white;">
-                </div>
-                
-                <div style="margin-bottom: 15px;">
-                    <textarea name="message" required placeholder="What are we building together?" 
-                              style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #334155; background: #0f172a; color: white; height: 100px;"></textarea>
-                </div>
-
-                <button type="submit" style="background: #38bdf8; color: #0f172a; border: none; padding: 12px; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%;">
-                    Submit Request
-                </button>
-            </form>
-        </div>
-        <hr>
-        <p><b>Website : </b> Burhanuddinport.com</p>
-        <hr>
-        <p><b>Address:</b> India, Barwani, MP</p>
-</div>
-
-    </footer>
 </body>
 </html>
